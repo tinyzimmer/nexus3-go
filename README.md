@@ -1,13 +1,13 @@
 # nexus3-go
 
-[![GoDoc](http://godoc.org/badge.png)](http://godoc.org/github.com/tinyzimmer/nexus3-go)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=round-square)](http://godoc.org/github.com/tinyzimmer/nexus3-go)
 
 `nexus3-go` provides a golang client and methods for the Sonatype Nexus3 API. I aim to have all the REST
 methods implemented, but the main feature is the script interface that provides for functionality
 that does not exist via the external API.
 
 I'll be sure to spruce up this README if I continue this project, but for documentation for now please consult
-[GoDoc](http://godoc.org/github.com/tinyzimmer/nexus3-go)
+[GoDoc](http://godoc.org/github.com/tinyzimmer/nexus3-go).
 
 ## nexus3-go Command
 
