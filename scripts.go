@@ -77,7 +77,22 @@ type Script struct {
 }
 
 // EphemeralScript is the same as Script, but provides an Execute() call which
-// will create and destroy a throw-away script for you after execution.
+// will create and destroy a throw-away script for you during execution. The main
+// benefit is having the Delete() call handled internally. You also don't need to name
+// the script.
+//
+// Example
+//
+// Create a script for automatically cleaned up execution with different arguments
+//     client, _ := nexus.New("http://localhost:8081", "admin", "admin123")
+//     myScript := nexus.String("return args")
+//     script := client.NewEphemeralScript(
+//         &nexus.Script{
+//             Content: myScript
+//         })
+//     res, _ := script.Execute(someArgs)  // Every execution creates the script in Nexus and immediately deletes it.
+//     res, _ = script.Execute(someOtherArgs)
+//     // ...
 type EphemeralScript struct {
 	*Script
 }
